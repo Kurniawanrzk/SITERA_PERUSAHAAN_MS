@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Perusahaan;
+use App\Http\Controllers\PerusahaanController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
