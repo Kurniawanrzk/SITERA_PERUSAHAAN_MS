@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('nomor_telepon');
             $table->string('gambar_perusahaan')->nullable();
+            $table->string('nomor_registrasi')->nullable();
             $table->timestamps();
         });
     }

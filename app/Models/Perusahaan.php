@@ -15,6 +15,7 @@ class Perusahaan extends Model
     protected $keyType = 'string'; 
     protected $fillable = [
         'user_id',
+        "nomor_registrasi",
         'nama_perusahaan',
         'jenis_perusahaan',
         'alamat',

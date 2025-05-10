@@ -16,4 +16,6 @@ use App\Http\Controllers\PerusahaanController;
 Route::prefix("v1/perusahaan")
 ->group(function() {
     Route::get("cek-user/{user_id}", [PerusahaanController::class,"cekUser"]);
+    Route::get("cek-profil", [PerusahaanController::class,"cekProfil"]);
+    Route::post("registerasi-perusahaan", [PerusahaanController::class,"registerasiPerusahaan"]);
 });
