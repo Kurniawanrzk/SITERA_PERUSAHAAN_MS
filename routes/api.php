@@ -18,4 +18,5 @@ Route::prefix("v1/perusahaan")
     Route::get("cek-user/{user_id}", [PerusahaanController::class,"cekUser"]);
     Route::get("cek-profil", [PerusahaanController::class,"cekProfil"]);
     Route::post("registerasi-perusahaan", [PerusahaanController::class,"registerasiPerusahaan"]);
+    Route::get("/cek-perusahaan-superadmin", [PerusahaanController::class, "cekPerusahaanDariUserId"]);
 });

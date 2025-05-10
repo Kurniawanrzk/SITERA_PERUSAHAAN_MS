@@ -50,6 +50,24 @@ class PerusahaanController extends Controller
 
     }
 
+    public function cekPerusahaanDariUserId(Request $request)
+    {
+        $user_ids = $request->user_ids;
+
+        $perusahaan = Perusahaan::whereIn("user_id", $user_ids)->get();
+        if ($perusahaan) {
+            return response()->json([
+                "status" => true,
+                "data" => $perusahaan
+            ], 200);
+        } else {
+            return response()->json([
+                "status" => false,
+                "message" => "BSU not found."
+            ], 404);
+        }
+    }
+
     public function registerasiPerusahaan(Request $request)
     {
         $perusahaan = Perusahaan::where("user_id", $request->get("user_id"));
