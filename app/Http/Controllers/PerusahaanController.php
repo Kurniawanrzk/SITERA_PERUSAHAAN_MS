@@ -83,6 +83,7 @@ class PerusahaanController extends Controller
             $perusahaan->user_id = $request->user_id;
             $perusahaan->nama_perusahaan = $request->nama;
             $perusahaan->nomor_registrasi = $request->nomor_registrasi;
+            $perusahaan->nomor_telepon = $request->nomor_telepon;
             $perusahaan->save();
             return response()
             ->json([
